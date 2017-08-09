@@ -57,3 +57,5 @@ gem 'kaminari'
 group :production do
   gem 'pg'
 end
+
+gem 'rails-i18n'
