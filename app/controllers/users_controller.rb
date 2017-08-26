@@ -1,10 +1,9 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show]
-  before_action :correct_user, only: [:index]
+  before_action :correct_user, only: [:index, ]
   
   def index
     @users = User.all.page(params[:page])
-    redirect_back(fallback_location: root_path)
   end
 
   def show
